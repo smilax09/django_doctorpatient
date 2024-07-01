@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock title %}
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>Register</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div class="form-group">
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                            {{ form.username.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                            {{ form.email.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.first_name.label_tag }}
+                            {{ form.first_name }}
+                            {{ form.first_name.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.last_name.label_tag }}
+                            {{ form.last_name }}
+                            {{ form.last_name.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.profile_picture.label_tag }}
+                            {{ form.profile_picture }}
+                            {{ form.profile_picture.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.password.label_tag }}
+                            {{ form.password }}
+                            {{ form.password.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.confirm_password.label_tag }}
+                            {{ form.confirm_password }}
+                            {{ form.confirm_password.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.address_line1.label_tag }}
+                            {{ form.address_line1 }}
+                            {{ form.address_line1.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.city.label_tag }}
+                            {{ form.city }}
+                            {{ form.city.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.state.label_tag }}
+                            {{ form.state }}
+                            {{ form.state.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.pincode.label_tag }}
+                            {{ form.pincode }}
+                            {{ form.pincode.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.user_type.label_tag }}
+                            {{ form.user_type }}
+                            {{ form.user_type.errors }}
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

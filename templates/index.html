@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}SingUP | SignIn{% endblock title %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center mb-4">Sign Up or Sign In</h2>
+                <div class="text-center">
+                    <a href="{% url 'register' %}" class="btn btn-success btn-lg mr-2">Sign Up</a>
+                    <a href="{% url 'login' %}" class="btn btn-primary btn-lg ml-2">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
